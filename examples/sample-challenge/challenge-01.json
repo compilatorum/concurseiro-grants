@@ -1,0 +1,13 @@
+{
+  "challenge_id": "CH-001",
+  "title": "Can we turn one Farcaster conversation into a verifiable, reusable open-source contribution?",
+  "problem": "Projetos Web3 acumulam conversas no Farcaster que se perdem sem virar artefatos reutilizáveis e rastreáveis no GitHub.",
+  "hypothesis": "H1 & H3",
+  "accepted_microcontributions": [
+    "Mapear soluções",
+    "Propor schema JSON",
+    "Implementar protótipo",
+    "Testar fluxo",
+    "Revisar modelo de incentivos"
+  ]
+}

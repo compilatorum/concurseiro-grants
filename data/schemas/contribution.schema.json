@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FarcasterCommonsLabMicroContribution",
+  "type": "object",
+  "required": [
+    "id",
+    "challenge_id",
+    "author_farcaster",
+    "type",
+    "evidence_url",
+    "evidence_level",
+    "instrument"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "challenge_id": {
+      "type": "string"
+    },
+    "author_farcaster": {
+      "type": "string"
+    },
+    "type": {
+      "enum": [
+        "PROBLEM_DISCOVERY",
+        "TECH_PROPOSAL",
+        "BUG_REPRO",
+        "DOCUMENTATION",
+        "ONBOARDING_TEST",
+        "ECON_ANALYSIS",
+        "SIMULATION",
+        "HYPOTHESIS_REVIEW",
+        "INTEGRATION",
+        "ARTIFACT_REUSE"
+      ]
+    },
+    "evidence_url": {
+      "type": "string"
+    },
+    "evidence_level": {
+      "enum": [
+        "L1_DECLARED",
+        "L2_OBSERVED",
+        "L3_REVIEWED",
+        "L4_REPRODUCED",
+        "L5_EXTERNAL_IMPACT"
+      ]
+    },
+    "instrument": {
+      "enum": [
+        "REPUTATION_ONLY",
+        "UTILITY_CREDIT",
+        "DEVNET_TOKEN"
+      ]
+    }
+  }
+}
