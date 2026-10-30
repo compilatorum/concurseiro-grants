@@ -674,7 +674,7 @@ var STACK_MODULES = [
     code: "MÓDULO A",
     title: "Infraestrutura de Registro, Proveniência e Schemas (`Eidos` + Core Agnóstico)",
     layer: "Camada A (Recursos próprios) + Camada B (Gitcoin QF / comunidade, se elegível)",
-    ask: 20000,
+    ask: null,
     scope: "Esquema de evidências (L1–L5), modelo de microcontribuições (`contribution.schema.json`), manifesto `EidosManifest v1.0` e dossiê de reprodutibilidade.",
     exclusiveCost: "Desenvolvimento de schemas, validação automatizada e documentação de padrões abertos.",
     repo: "compilatorum/eidos-tokenization & compilatorum/concurseiro-grants"
@@ -684,7 +684,7 @@ var STACK_MODULES = [
     code: "MÓDULO B",
     title: "Integração Farcaster Commons Lab & Experiência de Contribuição",
     layer: "Camada B (Gitcoin / Giveth / crowdfunding comunitário; validar janela)",
-    ask: 30000,
+    ask: null,
     scope: "Publicação de desafios no Farcaster, Mini-App (`farcaster.json`), conversão Convo → Issue/PR e relatórios públicos semanais (Build in Public).",
     exclusiveCost: "Frontend do Mini-App, facilitação dos ciclos semanais e incentivos comunitários de teste.",
     repo: "compilatorum/concurseiro-grants & compilatorum/IPIT"
@@ -694,7 +694,7 @@ var STACK_MODULES = [
     code: "MÓDULO C",
     title: "Motor de Políticas, Recibos Assinados e Alocação (`ValueCurator` + 3 Taxas)",
     layer: "Camada C (Solana Foundation / Superteam) + Colosseum (aceleradora/investimento)",
-    ask: 50000,
+    ask: null,
     scope: "Integração de propostas e recibos `Ed25519` com o cofre PDA e recolhimento das 3 taxas administrativas (`deposit_with_fee`, `collect_periodic_fee`, `metabolize_yield`).",
     exclusiveCost: "Engenharia e auditoria dos contratos inteligentes em Rust/Anchor e SDK TypeScript.",
     repo: "smp-sandramariapereira/valuecurator (branch: feat/tri-tier-admin-fees)"
@@ -1071,7 +1071,7 @@ function initStk(){
   for (i = 0; i < STACK_MODULES.length; i++){ if (S.stk[STACK_MODULES[i].id]) active++; }
   $("stkStats").innerHTML =
     "<div class=c><b>" + active + " / " + STACK_MODULES.length + "</b><small>Módulos Independentes (A, B, C)</small></div>" +
-    "<div class=c><b style='color:var(--gr)'>US$ " + stkSum().toLocaleString("pt-BR") + "</b><small>Orçamento Modular Combinado</small></div>" +
+    "<div class=c><b style='color:var(--gr)'>US$ " + stkSum().toLocaleString("pt-BR") + "</b><small>Orçamento modular (não definido)</small></div>" +
     "<div class=c><b>5 Camadas</b><small>Próprio + Comunidade + Prospectivo + Retro + Multi-rede</small></div>" +
     "<div class=c><b>100%</b><small>Rastreabilidade no FUNDING-LEDGER.md</small></div>";
 
@@ -1080,7 +1080,7 @@ function initStk(){
     var m = STACK_MODULES[i];
     var on = !!S.stk[m.id];
     cards += "<div class=c style='border-left:4px solid " + (on ? "var(--gr)" : "var(--ln)") + "'>" +
-      "<span class='tag " + (on ? "gr" : "") + "'>" + m.code + " • US$ " + m.ask.toLocaleString("pt-BR") + "</span>" +
+      "<span class='tag " + (on ? "gr" : "") + "'>" + m.code + " • " + (m.ask ? "US$ " + m.ask.toLocaleString("pt-BR") : "Orçamento a definir") + "</span>" +
       "<h3>" + esc(m.title) + "</h3>" +
       "<p style='font-size:12.5px;color:var(--mu);margin:4px 0'><strong>Camada:</strong> " + esc(m.layer) + "</p>" +
       "<p style='font-size:13px;margin:4px 0'><strong>Escopo Técnico Isolado:</strong> " + esc(m.scope) + "</p>" +
@@ -1104,7 +1104,7 @@ function genStackProof(){
   for (var i = 0; i < STACK_MODULES.length; i++){
     var m = STACK_MODULES[i];
     if (S.stk[m.id]){
-      o += "### " + m.code + ": " + m.title + " (US$ " + m.ask.toLocaleString("pt-BR") + ")\n";
+      o += "### " + m.code + ": " + m.title + " (" + (m.ask ? "US$ " + m.ask.toLocaleString("pt-BR") : "orçamento a definir") + ")\n";
       o += "- **Camada e Fonte Alvo:** " + m.layer + "\n";
       o += "- **Escopo Exclusivo:** " + m.scope + "\n";
       o += "- **Despesas Exclusivas Alocadas:** " + m.exclusiveCost + "\n";
