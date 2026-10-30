@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://compilatorum.github.io/concurseiro-grants/schemas/funding-unit.schema.json",
+  "title": "GrantOSFundingUnit",
+  "type": "object",
+  "required": ["unit_id", "project_id", "title", "problem", "deliverables", "acceptance", "status", "allocation_id", "license"],
+  "properties": {
+    "unit_id": {"type": "string", "minLength": 1},
+    "project_id": {"type": "string", "minLength": 1},
+    "title": {"type": "string", "minLength": 5},
+    "problem": {"type": "string", "minLength": 10},
+    "deliverables": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "acceptance": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "estimate_hours_min": {"type": ["number", "null"], "minimum": 0},
+    "estimate_hours_max": {"type": ["number", "null"], "minimum": 0},
+    "budget_amount": {"type": ["number", "null"], "minimum": 0},
+    "budget_currency": {"type": ["string", "null"]},
+    "dependencies": {"type": "array", "items": {"type": "string"}},
+    "evidence": {"type": "array", "items": {"type": "string", "format": "uri"}},
+    "status": {"enum": ["DRAFT", "SCOPED", "REVIEWED", "LISTED", "FUNDED", "IN_PROGRESS", "SUBMITTED", "ACCEPTED", "SETTLED", "ARCHIVED", "BLOCKED", "CANCELLED", "EXPIRED", "REJECTED"]},
+    "funding_source_id": {"type": ["string", "null"]},
+    "allocation_id": {"type": "string", "minLength": 1},
+    "license": {"type": "string", "minLength": 1},
+    "transfer_policy": {"enum": ["NON_TRANSFERABLE", "ASSIGNMENT_WITH_APPROVAL", "SPONSORSHIP_TRANSFER_WITH_CONSENT", "SEPARATE_REVIEW_REQUIRED"]},
+    "risk_flags": {"type": "array", "items": {"type": "string"}},
+    "owner": {"type": ["string", "null"]},
+    "created_at": {"type": "string", "format": "date-time"}
+  },
+  "additionalProperties": false
+}
