@@ -365,7 +365,7 @@ footer{max-width:1240px;margin:0 auto;padding:12px 16px 28px;color:var(--mu);fon
             </tr>
             <tr>
               <td><code>smp-sandramariapereira/valuecurator</code></td>
-              <td>Políticas determinísticas, propostas, recibos assinados `Ed25519`, cofre PDA e 3 taxas (`feat/tri-tier-admin-fees`)</td>
+              <td>Políticas determinísticas, propostas, recibos assinados `Ed25519`, cofre PDA e políticas de alocação (validar implementação atual)</td>
               <td>Vincular o hash da evidência aprovada no GitHub como gatilho de liberação de créditos/recompensas</td>
             </tr>
             <tr>
@@ -695,7 +695,7 @@ var STACK_MODULES = [
     title: "Motor de Políticas, Recibos Assinados e Alocação (`ValueCurator` + 3 Taxas)",
     layer: "Camada C (Solana Foundation / Superteam) + Colosseum (aceleradora/investimento)",
     ask: null,
-    scope: "Integração de propostas e recibos `Ed25519` com o cofre PDA e recolhimento das 3 taxas administrativas (`deposit_with_fee`, `collect_periodic_fee`, `metabolize_yield`).",
+    scope: "Integração de propostas e recibos `Ed25519` com o cofre PDA e regras de alocação e execução; validar instruções e escopo no código atual.",
     exclusiveCost: "Engenharia e auditoria dos contratos inteligentes em Rust/Anchor e SDK TypeScript.",
     repo: "smp-sandramariapereira/valuecurator (branch: feat/tri-tier-admin-fees)"
   }
@@ -720,7 +720,7 @@ var FORM = [
   ["Unidade Experimental (Microcontribuições)","Como tarefas pequenas e recombináveis reduzem a barreira de entrada para colaboradores"],
   ["Design de Mecanismos (3 Instrumentos)","Por que separamos Reputação, Créditos de Utilidade e Tokens Transferíveis (Sequência A–D)"],
   ["Arquitetura: Core Agnóstico vs. Adaptadores","Como o protocolo separa a lógica central de evidências dos contratos de cada rede"],
-  ["Integração ValueCurator & Sustentabilidade","Papel dos recibos assinados e das 3 taxas administrativas (Depósito, Periódica e Performance)"],
+  ["Integração ValueCurator & Sustentabilidade","Papel dos recibos assinados e das políticas de alocação; validar implementação e obrigações atuais"],
   ["Plano de Execução de 30 Dias (Semanas 1–4)","Entregas semanais e critérios objetivos de conclusão"],
   ["Protocolo de Evidências (Atenção vs. Contribuição vs. Impacto)","Como o dossiê distingue alcance social de artefatos reproduzidos (Níveis L1 a L5)"],
   ["Ecologia Socioeconômica (6 Fluxos)","O que o projeto devolve ao ecossistema em Conhecimento, Trabalho, Código e Utilização"],
@@ -971,7 +971,7 @@ function simTokenExperiment(){
     "  -> Testa H2 sem ruído de especulação financeira.\n\n" +
     "• Grupo / Fase 3 (+ Token Transferível em Devnet — Experimento B):\n" +
     "  -> Cunhagem de SPL Token-2022 (`eidos-tokenization`) + Cofre PDA (`valuecurator`).\n" +
-    "  -> Valida infraestrutura técnica end-to-end (recibos Ed25519 e 3 taxas administrativas).";
+    "  -> Valida infraestrutura técnica end-to-end (recibos Ed25519 e regras de alocação).";
 }
 
 /* 4. ABA HIPÓTESES H1-H4 & DOSSIÊ */
