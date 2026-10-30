@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Farcaster Commons Lab (IPIT) × ValueCurator — Concurseiro de Grants v3.0</title>
+<title>Farcaster Commons Lab × Compilatorum GrantOS — Experimental Dashboard</title>
 <style>
 :root{
   --bg:#f2f5f8;--sf:#ffffff;--sf2:#f8fafc;--ink:#14213d;--mu:#5b6678;
@@ -107,9 +107,9 @@ footer{max-width:1240px;margin:0 auto;padding:12px 16px 28px;color:var(--mu);fon
     <div class="hd-left">
       <h1>
         🌱 Farcaster <span class="hl">Commons Lab</span> (IPIT)
-        <span class="bdg">v3.0 • Inteligência Coletiva × ValueCurator × Grants</span>
+        <span class="bdg">IPIT Lab v3.0 • Experimental UI · GrantOS docs are authoritative</span>
       </h1>
-      <div class="sub">An open experiment in collective intelligence, contribution incentives and ecosystem regeneration: <code>Interação &rarr; Contribuição &rarr; Evidência &rarr; Reconhecimento &rarr; Incentivo &rarr; Reinvestimento</code></div>
+      <div class="sub">Experimental workspace for collective intelligence and evidence-backed funding. See docs/GRANTOS-OPERATING-MODEL.md for the current operating model: <code>Interação &rarr; Contribuição &rarr; Evidência &rarr; Reconhecimento &rarr; Incentivo &rarr; Reinvestimento</code></div>
       <div class="ov-wrap">
         <div class="ov"><i id="ovb"></i></div>
         <div class="ovl" id="ovl">Maturidade Experimental & Prontidão de Grants: 0%</div>
@@ -432,8 +432,8 @@ footer{max-width:1240px;margin:0 auto;padding:12px 16px 28px;color:var(--mu);fon
     </div>
 
     <div class="chips">
-      <button onclick="loadAppTemplate('commons_lab')">🌱 Template 1: Farcaster Commons Lab — IPIT (RetroPGF / Gitcoin / Octant / Base)</button>
-      <button onclick="loadAppTemplate('solana_devnet')">⚡ Template 2: ValueCurator Core &amp; Motor Tri-Tier de Taxas (Solana / Colosseum)</button>
+      <button onclick="loadAppTemplate('commons_lab')">🌱 Template 1: Farcaster Commons Lab — IPIT (Gitcoin / Giveth / community funding)</button>
+      <button onclick="loadAppTemplate('solana_devnet')">⚡ Template 2: ValueCurator / ProofGate (Solana / Superteam / Colosseum)</button>
       <button onclick="loadAppTemplate('multichain_adapter')">🔌 Template 3: Adaptador Multi-Rede &amp; Proveniência Eidos (Arbitrum / Optimism / Sui)</button>
     </div>
 
@@ -661,9 +661,9 @@ var PLAN_30_DAYS = [
 
 /* Matriz de Seleção da Primeira Rede (7 Critérios) */
 var NET_MATRIX = [
-  ["Base / Optimism (Superchain)", "5/5 (Nativa no Farcaster)", "5/5 (Testnet grátis / L2 centavos)", "5/5 (Frames / Mini-Apps / EAS)", "5/5 (Viem, Wagmi, Karma GAP)", "5/5 (RetroPGF + Base Grants)", "5/5 (Padrão EVM)", "Alta (Comunidade Farcaster ativa)"],
+  ["Base / Optimism (Superchain)", "5/5 (Nativa no Farcaster)", "5/5 (Testnet grátis / L2 centavos)", "5/5 (Frames / Mini-Apps / EAS)", "5/5 (Viem, Wagmi, Karma GAP)", "3/5 (Governance Fund; verificar missões)", "5/5 (Padrão EVM)", "Alta (Comunidade Farcaster ativa)"],
   ["Solana (Devnet / Mainnet)", "4/5 (Forte em DeFi/DeSci)", "5/5 (Devnet grátis / Sub-centavo)", "4/5 (Solana Actions / Mini-Apps)", "5/5 (Anchor, Token-2022, Pyth)", "5/5 (Colosseum + Solana Found.)", "4/5 (Rust modular)", "Alta (ValueCurator + Eidos já rodando)"],
-  ["Arbitrum (Orbit / Stylus)", "4/5 (Forte em DAOs e DeFi)", "4/5 (Testnet grátis / L2 baixo)", "4/5 (Compatível c/ Farcaster EVM)", "5/5 (Stylus aceita contratos Rust!)", "5/5 (Questbook + DAO Grants)", "5/5 (EVM + Rust WASM)", "Média-Alta (Foco em tesourarias)"],
+  ["Arbitrum (Orbit / Stylus)", "4/5 (Forte em DAOs e DeFi)", "4/5 (Testnet grátis / L2 baixo)", "4/5 (Compatível c/ Farcaster EVM)", "5/5 (Stylus aceita contratos Rust!)", "3/5 (Programas atuais da Foundation; verificar)", "5/5 (EVM + Rust WASM)", "Média-Alta (Foco em tesourarias)"],
   ["Gitcoin / Octant (Agnóstico)", "5/5 (Foco em Bens Públicos)", "5/5 (Multi-rede)", "4/5 (Comunidade Web3 aberta)", "4/5 (Grants Stack / Allo / EAS)", "4/5 (QF + Yield Contínuo)", "5/5 (Totalmente portável)", "Alta (Ideal para o Core Agnóstico)"]
 ];
 
@@ -673,7 +673,7 @@ var STACK_MODULES = [
     id: 0,
     code: "MÓDULO A",
     title: "Infraestrutura de Registro, Proveniência e Schemas (`Eidos` + Core Agnóstico)",
-    layer: "Camada A (Recursos Próprios) + Camada D (Retroativo — Gitcoin / Octant)",
+    layer: "Camada A (Recursos próprios) + Camada B (Gitcoin QF / comunidade, se elegível)",
     ask: 20000,
     scope: "Esquema de evidências (L1–L5), modelo de microcontribuições (`contribution.schema.json`), manifesto `EidosManifest v1.0` e dossiê de reprodutibilidade.",
     exclusiveCost: "Desenvolvimento de schemas, validação automatizada e documentação de padrões abertos.",
@@ -683,7 +683,7 @@ var STACK_MODULES = [
     id: 1,
     code: "MÓDULO B",
     title: "Integração Farcaster Commons Lab & Experiência de Contribuição",
-    layer: "Camada B (Comunitária) + Camada D/E (Optimism RetroPGF / Base Grants)",
+    layer: "Camada B (Gitcoin / Giveth / crowdfunding comunitário; validar janela)",
     ask: 30000,
     scope: "Publicação de desafios no Farcaster, Mini-App (`farcaster.json`), conversão Convo → Issue/PR e relatórios públicos semanais (Build in Public).",
     exclusiveCost: "Frontend do Mini-App, facilitação dos ciclos semanais e incentivos comunitários de teste.",
@@ -693,7 +693,7 @@ var STACK_MODULES = [
     id: 2,
     code: "MÓDULO C",
     title: "Motor de Políticas, Recibos Assinados e Alocação (`ValueCurator` + 3 Taxas)",
-    layer: "Camada C (Prospectiva — Solana / Colosseum) + Camada E (Arbitrum Stylus)",
+    layer: "Camada C (Solana Foundation / Superteam) + Colosseum (aceleradora/investimento)",
     ask: 50000,
     scope: "Integração de propostas e recibos `Ed25519` com o cofre PDA e recolhimento das 3 taxas administrativas (`deposit_with_fee`, `collect_periodic_fee`, `metabolize_yield`).",
     exclusiveCost: "Engenharia e auditoria dos contratos inteligentes em Rust/Anchor e SDK TypeScript.",
@@ -709,7 +709,7 @@ var FASES = [
   ["🔎","5. Due Diligence & Revisão",["Demonstrar que um terceiro consegue inspecionar o código e reproduzir o fluxo central","Apresentar o mapeamento claro do que já existe no IPIT e no ValueCurator vs. lacunas"]],
   ["✅","6. Acordo & Obrigações",["Compreender que ausência de equity/dívida não isenta de milestones, licenças abertas e relatórios","Separar despesas exclusivas de cada grant das despesas compartilhadas do laboratório"]],
   ["🛠️","7. Execução & Cadência Semanal",["Manter a cadência Segunda (Desafio) -> Quarta (PR) -> Quinta (Teste) -> Sexta (Relatório)","Reconhecer contribuições pela Regra de Ouro (utilidade e reprodutibilidade, não popularidade)"]],
-  ["🌱","8. Regeneração & Pós-Grant",["Converter artefatos abertos reutilizados em elegibilidade para rodadas retroativas","Sustentar a infraestrutura no longo prazo via as 3 taxas administrativas do ValueCurator"]]
+  ["🌱","8. Regeneração & Pós-Grant",["Converter artefatos abertos reutilizados em elegibilidade para rodadas retroativas","Sustentar a infraestrutura por meio de receita de serviços, suporte, pilotos ou financiamento recorrente validado"]]
 ];
 
 var FORM = [
@@ -1144,7 +1144,7 @@ function loadAppTemplate(tpl){
     "Nossa unidade experimental é a Microcontribuição Verificável (reproduzir bug, propor schema, escrever documentação, testar onboarding, revisar hipótese), permitindo colaboração modular e recombinável.",
     "Separamos 3 instrumentos distintos: Reputação (histórico contextual), Créditos de Utilidade (direito de solicitar análises/revisões) e Token Transferível em Devnet, seguindo a sequência gradual Experimento A → B → C → D.",
     "Dividimos o sistema em um Core Agnóstico de Rede (modelo de contribuição, protocolo de evidências L1–L5, regras de reconhecimento) e Adaptadores Específicos (Farcaster Mini-App, Solana Anchor/Token-2022, Superchain EAS).",
-    "O ValueCurator coordena políticas determinísticas, recibos assinados Ed25519 e recolhimento de 3 taxas administrativas on-chain (Taxa de Depósito de 50 bps, Taxa Periódica de 1 USDC/época e Taxa de Performance de 15% sobre o lucro).",
+    "O ValueCurator explora políticas determinísticas, recibos assinados e alocação segura. Qualquer taxa, orçamento ou obrigação financeira deve ser validada na implementação e no escopo atual antes de constar numa candidatura.",
     "Semana 1: Delimitação e EXPERIMENT.md. Semana 2: Primeiro fluxo funcional e Ledger de Créditos. Semana 3: Experimentação pública Farcaster/GitHub + Devnet. Semana 4: Release, relatório e pacote de replicação.",
     "Separamos Atenção (alcance social), Contribuição (artefato técnico) e Impacto (utilidade real), classificando cada entrega nos níveis L1 (Declarada) a L5 (Impacto Confirmado por Terceiros) em docs/EVIDENCE-PROTOCOL.md.",
     "Modelamos 6 fluxos (Conhecimento, Trabalho, Atenção, Capital, Reputação e Utilização) para medir empiricamente o ciclo Contribuição → Artefato → Utilização → Impacto → Financiamento → Nova contribuição.",
@@ -1157,7 +1157,7 @@ function loadAppTemplate(tpl){
   ];
   if (tpl === "solana_devnet"){
     d[0] = "Módulo C — ValueCurator Sovereign Engine & Tri-Tier Fee Protocol (Solana Devnet / Colosseum)";
-    d[11] = "Escopo Exclusivo do Módulo C (US$ 50.000): Engenharia e auditoria das instruções Rust/Anchor (deposit_with_fee, collect_periodic_fee, metabolize_yield) e integração com Pyth Feed 922.";
+    d[11] = "Escopo Exclusivo do Módulo C: definir orçamento somente após revisar o código atual, delimitar entregáveis, testes, threat model e plano de auditoria. Não há valor de grant presumido.";
   } else if (tpl === "multichain_adapter"){
     d[0] = "Módulo A & B — Core Agnóstico de Proveniência & Adaptador Multi-Rede (Superchain / Arbitrum / Gitcoin)";
     d[11] = "Escopo Exclusivo dos Módulos A e B: Schemas abertos de microcontribuições, Farcaster Mini-App e portabilidade multi-rede auditada no FUNDING-LEDGER.md.";
