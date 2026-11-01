@@ -17,7 +17,7 @@ GrantOS extends that loop by matching each bounded work package to an appropriat
 | Need | Document |
 |---|---|
 | Understand the funding operating model, gates and lifecycle | [GrantOS Operating Model](docs/GRANTOS-OPERATING-MODEL.md) |
-| See which funding sources fit each Compilatorum project | [Project × Funding Map](docs/PROJECT-FUNDING-MAP.md) |
+| See which funding sources fit each Compilatorum project | [Project × Funding Map](docs/PROJECT-FUNDING-MAP.md) |\n| Match funded ecosystem problems to our repositories and stack complementary grants | [Demand-Driven Grant Stacking Map — 2026-11](docs/DEMAND-DRIVEN-GRANT-STACKING-2026-11.md) |
 | Review the ecosystem landscape and source links | [Grant Landscape — 2026-10](docs/GRANT-LANDSCAPE-2026-10.md) |
 | Decompose unfinished work into verifiable and fundable units | [Microtask Market](docs/MICROTASK-MARKET.md) |
 | Understand the experiment and hypotheses H1–H4 | [Experiment](docs/EXPERIMENT.md) |
@@ -34,7 +34,7 @@ concurseiro-grants/
 ├── index.html
 ├── docs/
 │   ├── GRANTOS-OPERATING-MODEL.md
-│   ├── PROJECT-FUNDING-MAP.md
+│   ├── PROJECT-FUNDING-MAP.md\n│   ├── DEMAND-DRIVEN-GRANT-STACKING-2026-11.md
 │   ├── GRANT-LANDSCAPE-2026-10.md
 │   ├── MICROTASK-MARKET.md
 │   ├── EXPERIMENT.md
