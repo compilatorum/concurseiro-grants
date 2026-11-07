@@ -29,6 +29,22 @@ GrantOS extends that loop by matching each bounded work package to an appropriat
 | Review evidence levels L1–L5 | [Evidence Protocol](docs/EVIDENCE-PROTOCOL.md) |
 | Reconcile scopes, costs and funding sources | [Funding Ledger](docs/FUNDING-LEDGER.md) |
 
+
+## 🪷 Karma — Project Profiles, Milestones & Impact
+
+The following package prepares the portfolio for Karma (formerly Karma GAP). It is a publishing kit, not a claim that profiles or grants have already been created on the platform.
+
+| Need | Document |
+|---|---|
+| Understand Karma's role and the platform workflow | [Karma Platform Playbook](docs/KARMA-PLATFORM-PLAYBOOK.md) |
+| Ready-to-paste profiles for ValueCurator, Farcaster Commons Lab and Nodespace | [Karma Project Profiles](docs/KARMA-PROJECT-PROFILES.md) |
+| Concrete milestones and progress-update templates | [Karma Milestones & Updates](docs/KARMA-MILESTONES-AND-UPDATES.md) |
+| Activities → outputs → outcomes → indicators | [Karma Impact Measurement](docs/KARMA-IMPACT-MEASUREMENT.md) |
+| Map GitHub artifacts to public claims and evidence levels | [Karma Evidence Mapping](docs/KARMA-EVIDENCE-MAPPING.md) |
+| Operational publishing and monthly reconciliation | [Karma Publishing Checklist](docs/KARMA-PUBLISHING-CHECKLIST.md) |
+
+**Publishing order:** ValueCurator → Farcaster Commons Lab → Nodespace. Confirm canonical links, current implementation stage, ownership, license and evidence before publishing. The profile drafts deliberately mark unknowns and avoid claims of production readiness, adoption, funding or audit that have not been verified.
+
 ## 🧱 Repository map
 
 ```text
